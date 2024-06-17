@@ -9,28 +9,25 @@
   <body>
     <div class="relative h-screen">
       <div
-        class="absolute inset-0 bg-gradient-to-b from-transparent to-white"
-      ></div>
-      <div
         class="absolute inset-0 bg-cover bg-center"
         style="background-image: url('/static/images/backgrnd.jpg')"
       >
         <!-- Your content here -->
 
         <div
-          class="mt-7 text-2xl md:text-3xl rounded-3xl bg-cyan-700 mx-[500px] text-white text-center py-5 font-bold"
+          class="mt-7 text-sm md:text-lg lg:text-2xl rounded-3xl bg-cyan-700 mx-auto w-[200px] sm:w-[300px] md:w-[500px] text-white text-center py-5 font-bold"
         >
           TeleCom Churn Analysis
         </div>
 
-        <div class="flex justify-evenly p-6 my-[100px]">
+        <div class="flex flex-wrap justify-center p-6 lg:m-[100px] my-[100px] md:my-[40px]">
           <img
-            class="rounded-3xl h-fit w-[800px]"
+            class="rounded-3xl mx-auto h-fit w-[300px] md:w-[500px] lg:w-[700px] lg:m-11"
             src="{{ url_for('static',filename='images/image2.png')}}"
           />
 
           <blockquote
-            class="text-2xl font-bold italic text-center text-slate-900 py-[100px]"
+            class="text-[15px] font-bold italic text-center text-slate-900 pt-[100px] lg:pt-[150px] lg:text-2xl"
           >
             " Telecom churn analysis predicts customer
             <span
@@ -48,9 +45,9 @@
           </blockquote>
         </div>
 
-        <div class="flex justify-evenly p-6 my-[200px]">
+        <div class="flex flex-wrap justify-center p-6 lg:m-[100px] my-[100px] md:my-[40px]">
           <blockquote
-            class="text-2xl font-bold italic text-center text-slate-900 py-[150px]"
+            class="text-[15px] font-bold italic text-center text-slate-900 pt-[100px] lg:pt-[150px] lg:text-2xl"
           >
             Uncovering trends to keep customers
             <span
@@ -68,13 +65,13 @@
           </blockquote>
 
           <img
-            class="h-fit w-[800px] rounded-3xl"
+            class="rounded-3xl mx-auto h-fit w-[300px] md:w-[500px] lg:w-[700px] lg:m-11"
             src="{{ url_for('static',filename='images/image.png')}}"
           />
         </div>
 
         <div class="container mx-auto mt-8">
-          <form action="/submit" method="post" class="flex flex-wrap">
+          <form action="/submit" method="post" class="flex flex-wrap justify-center">
             <div class="flex flex-col px-5 py-6 m-5 bg-slate-200 mx-5">
               <div class="flex flex-col px-5 py-6">
                 <label
@@ -409,13 +406,19 @@
         </div>
 
         {% if value == 1 %}
-        <h1 class="mt-5 text-center text-2xl font-bold text-black">RESULTS : </h1><div
+        <h1 class="mt-5 text-center text-2xl font-bold text-black">
+          RESULTS :
+        </h1>
+        <div
           class="p-2 w-[150px] h-[50px] bg-green-500 text-center text-2xl font-bold text-white rounded-lg mx-auto"
         >
           YES CHURN
         </div>
         {% elif value == 0 %}
-        <h1 class="mt-5 text-center text-2xl font-bold text-black">RESULTS : </h1><div
+        <h1 class="mt-5 text-center text-2xl font-bold text-black">
+          RESULTS :
+        </h1>
+        <div
           class="p-2 w-[150px] h-[50px] bg-red-500 text-2xl text-center font-bold text-white rounded-lg mx-auto"
         >
           NO CHURN
